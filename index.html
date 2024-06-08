@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock,Paper,Scissors</title>
+  <style>
+    body {
+      background-color: lightcoral;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <img src = "Rock.png" width = "200" height = "200">
+    <button onclick ="Rock()">Rock</button>
+   
+    <img src = "Paper.png" width = "200" height = "200">
+    <button onclick ="Paper()">Paper</button>
+  
+    <img src = "Scissors.png" width = "200" height = "200">
+    <button onclick ="Scissors()">Scissors</button>
+  </div>
+
+  <br><br><br><br>
+
+  <div class = "items">
+    <img id = "player" width = "200" height = "200">
+    <img id = "computer" width = "200" height = "200">
+  </div>
+
+  <script>
+    function Rock() {
+      var player = document.getElementById("player");
+      player.src = "Rock.png";
+      Computer();
+    }
+
+    function Paper() {
+      var player = document.getElementById("player");
+      player.src = "Paper.png";
+      Computer();
+    }
+
+    function Scissors() {
+      var player = document.getElementById("player");
+      player.src = "Scissors.png";
+      Computer();
+    }
+
+    function Computer() {
+      var computer = document.getElementById("computer");
+      var number = Math.floor (Math.random () * 3) + 1; 
+      if (number == 1) {
+        computer.src ="Rock.png";
+      }
+      if (number == 2) {
+        computer.src ="Paper.png";
+      }
+      if (number == 3) {
+        computer.src ="Scissors.png";
+      }
+    }
+    
+  </script>
+</body>
+
+</html>
